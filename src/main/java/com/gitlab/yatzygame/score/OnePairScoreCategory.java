@@ -4,13 +4,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * The AcesScoreCategory class implements the IScoreCategory interface and represents the
- * "Yatzy" category in the Yatzy game.
+ * The OnePairScoreCategory class implements the IScoreCategory interface and represents the
+ * "OnePair" category in the Yatzy game.
  */
 public class OnePairScoreCategory implements IScoreCategory{
 
     /**
-     * the OnePairScore function checks if the five dice have the same value if so it returns a score=50
+     * This implementation of the onePair score() method calculates the score by finding the pair of dice with the highest value
      *
      * @param values the values of the dice in the roll
      * @return the score value
@@ -18,7 +18,7 @@ public class OnePairScoreCategory implements IScoreCategory{
     @Override
     public int score(int[] values) {
 
-        // Utilisation de Collectors.groupingBy avec la méthode identity pour obtenir un Map des éléments et de leur nombre d'occurrences
+        // Utilisation de Collectors.groupingBy pour obtenir un Map des éléments et de leur nombre d'occurrences
         Map<Integer, Long> countEachElement = Arrays.stream(values).boxed()
                 .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
 
