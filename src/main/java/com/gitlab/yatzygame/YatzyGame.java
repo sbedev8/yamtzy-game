@@ -1,5 +1,7 @@
 package com.gitlab.yatzygame;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
+import com.gitlab.yatzygame.dice.DiceValue;
 import com.gitlab.yatzygame.score.ChanceScoreCategory;
 
 import java.util.Arrays;

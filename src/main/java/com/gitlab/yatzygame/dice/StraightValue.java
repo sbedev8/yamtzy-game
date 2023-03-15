@@ -1,4 +1,4 @@
-package com.gitlab.yatzygame;
+package com.gitlab.yatzygame.dice;
 
 import java.util.Arrays;
 import java.util.List;

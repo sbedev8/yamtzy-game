@@ -1,4 +1,4 @@
-package com.gitlab.yatzygame;
+package com.gitlab.yatzygame.dice;
 
 /**
  * Represents the possible values of a dice.

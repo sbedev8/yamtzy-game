@@ -1,6 +1,6 @@
 package com.gitlab.yatzygame.score;
 
-import com.gitlab.yatzygame.StraightValue;
+import com.gitlab.yatzygame.dice.StraightValue;
 
 import java.util.Arrays;
 import java.util.List;
