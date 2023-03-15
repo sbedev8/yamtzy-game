@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 public class TwoPairScoreCategory implements IScoreCategory{
 
     /**
-     * This implementation of the TwoPair score() which is the sum of the two pairs of dice rolled.
+     * This implementation of the TwoPair score(), which is the sum of the two pairs of dice rolled.
      *
      * @param values the values of the dice in the roll
      * @return the score value
@@ -24,7 +24,7 @@ public class TwoPairScoreCategory implements IScoreCategory{
         Map<Integer, Long> countEachElement = Arrays.stream(values).boxed()
                 .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
 
-        // Utilisation de Map.entrySet() et Stream pour récupérer le paire le plus grand
+        // Utilisation de Map.entrySet() et Stream pour récupérer tous les paires
         List<Integer> twoPairList = countEachElement.entrySet().stream()
                 .filter(entry -> entry.getValue() == 2)
                 .map(Map.Entry::getKey).collect(Collectors.toList());
