@@ -1,5 +1,7 @@
 package com.gitlab.yatzygame;
 
+import com.gitlab.yatzygame.score.ChanceScoreCategory;
+
 import java.util.Arrays;
 
 public class YatzyGame {
@@ -14,7 +16,10 @@ public class YatzyGame {
         YatzyGame player = new YatzyGame(diceRoll1);
         int[] handValues = player.diceRoll.getDiceValues();
 
+        int score = new ChanceScoreCategory().score(handValues);
+
         System.out.println(Arrays.toString(handValues));
+        System.out.println(score);
 
     }
 
