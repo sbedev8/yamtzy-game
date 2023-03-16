@@ -14,6 +14,6 @@
     - $ java -jar target/yatzy-game-1.0.1.jar
 
 #### lancer le jeu avec docker pour une utilisation immédiate.
-- une image a été deployer sur docker hub https://hub.docker.com/r/sbedevhub/yatzy-game
+- une image a été poussé sur docker hub https://hub.docker.com/r/sbedevhub/yatzy-game
   - $ docker push sbedevhub/yatzy-game:latest
   - $ docker run -it sbedevhub/yatzy-game
