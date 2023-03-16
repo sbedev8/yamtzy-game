@@ -2,14 +2,13 @@ package com.gitlab.yatzygame.score;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * The TwoPairScoreCategory class implements the IScoreCategory interface and represents the
  * "TwoPair" category in the Yatzy game.
  */
 
-public class TwoPairScoreCategory implements IScoreCategory{
+public class TwoPairCategory implements IScoreCategory{
 
     /**
      * This implementation of the TwoPair score(), which is the sum of the two pairs of dice rolled.

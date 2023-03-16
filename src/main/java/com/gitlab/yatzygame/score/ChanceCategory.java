@@ -6,7 +6,7 @@ import java.util.Arrays;
  * The ChanceScoreCategory class implements the IScoreCategory interface and represents the
  * "Chance" category in the Yatzy game.
  */
-public class ChanceScoreCategory implements IScoreCategory {
+public class ChanceCategory implements IScoreCategory {
 
     /**
      * Calculates the score for this category based on the sum of all dice values in a roll.

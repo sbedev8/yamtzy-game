@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
  * The OnePairScoreCategory class implements the IScoreCategory interface and represents the
  * "OnePair" category in the Yatzy game.
  */
-public class OnePairScoreCategory implements IScoreCategory{
+public class OnePairCategory implements IScoreCategory{
 
     /**
      * This implementation of the onePair score() method calculates the score by finding the pair of dice with the highest value

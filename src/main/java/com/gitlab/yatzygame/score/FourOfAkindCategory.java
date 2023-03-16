@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * "FourOfAkindScore" category in the Yatzy game.
  */
 
-public class FourOfAkindScoreCategory implements IScoreCategory{
+public class FourOfAkindCategory implements IScoreCategory{
 
     /**
      * This implementation of the FourOfAkind score(), which is the sum of the Four Of A kind of dice rolled.

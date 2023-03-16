@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class FoursScoreCategoryTest {
-    private final IScoreCategory strategy = new FoursScoreCategory();
+public class FoursCategoryTest {
+    private final IScoreCategory strategy = new FoursCategory();
 
     @Test
     public void testScoreWithNoFours() {

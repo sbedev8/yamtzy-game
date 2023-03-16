@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class AcesScoreCategoryTest {
-    private final IScoreCategory category = new AcesScoreCategory();
+public class AcesCategoryTest {
+    private final IScoreCategory category = new AcesCategory();
 
     @Test
     public void testScoreWithNoAces() {

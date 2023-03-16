@@ -4,30 +4,29 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TwosScoreCategoryTest {
-
-    private final IScoreCategory strategy = new TwosScoreCategory();
+public class ThreesCategoryTest {
+    private final IScoreCategory strategy = new ThreesCategory();
 
     @Test
-    public void testScoreWithNoTwos() {
-        int[] values = {1, 3, 5, 4, 6};
+    public void testScoreWithNoThrees() {
+        int[] values = {1, 4, 5, 4, 6};
         int expectedScore = 0;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
     }
 
     @Test
-    public void testScoreWithSomeTwos() {
-        int[] values = {5, 4, 2, 2, 1};
-        int expectedScore = 4;
+    public void testScoreWithSomeThrees() {
+        int[] values = {5, 3, 3, 2, 1};
+        int expectedScore = 6;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
     }
 
     @Test
-    public void testScoreWithAllTwos() {
-        int[] values = {2, 2, 2, 2};
-        int expectedScore = 8;
+    public void testScoreWithAllThrees() {
+        int[] values = {3, 3, 3, 3, 3};
+        int expectedScore = 15;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
     }

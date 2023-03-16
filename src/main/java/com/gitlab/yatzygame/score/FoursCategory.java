@@ -6,7 +6,7 @@ import java.util.Arrays;
  * The AcesScoreCategory class implements the IScoreCategory interface and represents the
  * "Fours" category in the Yatzy game.
  */
-public class FoursScoreCategory implements IScoreCategory{
+public class FoursCategory implements IScoreCategory{
 
     /**
      * Calculates the score for this category based on the sum of Fours dice values in a roll.

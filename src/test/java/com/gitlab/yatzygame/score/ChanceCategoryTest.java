@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ChanceScoreCategoryTest {
+public class ChanceCategoryTest {
 
-    private final IScoreCategory category = new ChanceScoreCategory();
+    private final IScoreCategory category = new ChanceCategory();
 
     @Test
     public void testScoreWithChance() {

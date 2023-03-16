@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class YatzyScoreCategoryTest {
-    private final IScoreCategory strategy = new YatzyScoreCategory();
+public class YatzyCategoryTest {
+    private final IScoreCategory strategy = new YatzyCategory();
 
     @Test
     public void testScoreWithNoYatzy() {

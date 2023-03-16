@@ -2,14 +2,13 @@ package com.gitlab.yatzygame.score;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 /**
  * The ThreeOfAkindScoreCategory class implements the IScoreCategory interface and represents the
  * "ThreeOfAkindScore" category in the Yatzy game.
  */
 
-public class ThreeOfAkindScoreCategory implements IScoreCategory{
+public class ThreeOfAkindCategory implements IScoreCategory{
 
     /**
      * This implementation of the ThreeOfAkind score(), which is the sum of the Three Of A kind of dice rolled.
