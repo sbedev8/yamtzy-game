@@ -24,7 +24,7 @@ public class OnePairScoreCategory implements IScoreCategory{
 
         // Utilisation de Map.entrySet() et Stream pour récupérer le paire le plus grand
         Optional<Integer> pair = countEachElement.entrySet().stream()
-                .filter(entry -> entry.getValue() == 2)
+                .filter(entry -> entry.getValue() >= 2)
                 .map(Map.Entry::getKey).min(Collections.reverseOrder());  // == .sorted(Collections.reverseOrder()).findFirst();
 
         return pair.map(p -> p * 2).orElse(0);

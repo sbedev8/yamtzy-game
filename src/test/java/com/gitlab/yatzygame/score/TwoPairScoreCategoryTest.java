@@ -31,4 +31,12 @@ public class TwoPairScoreCategoryTest {
         assertEquals(expectedScore, actualScore);
     }
 
+    @Test
+    public void testScoreWithTwoPairOtherValues() {
+        int[] values = {5, 5, 5, 1, 1};
+        int expectedScore = 12;
+        int actualScore = strategy.score(values);
+        assertEquals(expectedScore, actualScore);
+    }
+
 }

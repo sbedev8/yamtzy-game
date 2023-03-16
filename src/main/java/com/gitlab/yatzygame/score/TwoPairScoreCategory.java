@@ -26,7 +26,7 @@ public class TwoPairScoreCategory implements IScoreCategory{
 
         // Utilisation de Map.entrySet() et Stream pour récupérer tous les paires
         List<Integer> twoPairList = countEachElement.entrySet().stream()
-                .filter(entry -> entry.getValue() == 2)
+                .filter(entry -> entry.getValue() >= 2)
                 .map(Map.Entry::getKey).collect(Collectors.toList());
 
         if (twoPairList.size() == 2) {
