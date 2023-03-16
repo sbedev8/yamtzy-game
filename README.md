@@ -15,5 +15,5 @@
 
 #### lancer le jeu avec docker pour une utilisation immédiate.
 - une image a été deployer sur docker hub https://hub.docker.com/r/sbedevhub/yatzy-game
-  $ docker push sbedevhub/yatzy-game:latest
-  $ docker run -it sbedevhub/yatzy-game
+  - $ docker push sbedevhub/yatzy-game:latest
+  - $ docker run -it sbedevhub/yatzy-game
