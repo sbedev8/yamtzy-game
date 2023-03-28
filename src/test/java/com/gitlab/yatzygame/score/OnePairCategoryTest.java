@@ -1,5 +1,6 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class OnePairCategoryTest {
 
     @Test
     public void testScoreWithoutOnePair() {
-        int[] values = {1, 6, 4, 5, 2};
+        DiceRoll values = new DiceRoll(1, 6, 4, 5, 2);
         int expectedScore = 0;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
@@ -17,7 +18,7 @@ public class OnePairCategoryTest {
 
     @Test
     public void testScoreWithOnePair() {
-        int[] values = {1, 3, 2, 2, 5};
+        DiceRoll values = new DiceRoll(1, 3, 2, 2, 5);
         int expectedScore = 4;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
@@ -25,7 +26,7 @@ public class OnePairCategoryTest {
 
     @Test
     public void testScoreWithOnePairOtherValues() {
-        int[] values = {1, 2, 2, 2, 5};
+        DiceRoll values = new DiceRoll(1, 2, 2, 2, 5);
         int expectedScore = 4;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
@@ -33,7 +34,7 @@ public class OnePairCategoryTest {
 
     @Test
     public void testScoreWithTwoPair() {
-        int[] values = {1, 6, 2, 2, 6};
+        DiceRoll values = new DiceRoll(1, 6, 2, 2, 6);
         int expectedScore = 12;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);

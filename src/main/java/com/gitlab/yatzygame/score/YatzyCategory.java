@@ -1,5 +1,7 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
+
 import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -13,18 +15,11 @@ public class YatzyCategory implements IScoreCategory{
     /**
      * the yatzy function checks if the five dice have the same value if so it returns a score=50
      *
-     * @param values the values of the dice in the roll
+     * @param diceRoll the dice roll
      * @return the score value
      */
-    @Override
-    public int score(int[] values) {
-
-        Map<Integer, Long> countForEachElement = Arrays.stream(values).boxed().collect(Collectors.groupingBy(n -> n, Collectors.counting()));
-
-        if (countForEachElement.size() == 1) {
-            return 50;
-        }
-        return 0;
+    public int score(DiceRoll diceRoll) {
+        return diceRoll.isYatzy()  ? 50 : 0;
     }
 }
 

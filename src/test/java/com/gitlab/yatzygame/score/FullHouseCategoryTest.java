@@ -1,5 +1,6 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class FullHouseCategoryTest {
 
     @Test
     public void testScoreWithoutFullHouse() {
-        int[] values = {1, 6, 2, 2, 2};
+        DiceRoll values = new DiceRoll(1, 6, 2, 2, 2);
         int expectedScore = 0;
         int actualScore = category.score(values);
         assertEquals(expectedScore, actualScore);
@@ -23,7 +24,7 @@ public class FullHouseCategoryTest {
 
     @Test
     public void testScoreWithoutFullHouse_2() {
-        int[] values = {1, 2, 2, 2, 2};
+        DiceRoll values = new DiceRoll(1, 2, 2, 2, 2);
         int expectedScore = 0;
         int actualScore = category.score(values);
         assertEquals(expectedScore, actualScore);
@@ -31,7 +32,7 @@ public class FullHouseCategoryTest {
 
     @Test
     public void testScoreWithFullHouse() {
-        int[] values = {3, 3, 5, 5, 5};
+        DiceRoll values = new DiceRoll(3, 3, 5, 5, 5);
         int expectedScore = 21;
         int actualScore = category.score(values);
         assertEquals(expectedScore, actualScore);
@@ -39,7 +40,7 @@ public class FullHouseCategoryTest {
 
     @Test
     public void testScoreWithAllSameKind() {
-        int[] values = {5, 5, 5, 5, 5};
+        DiceRoll values = new DiceRoll(5, 5, 5, 5, 5);
         int expectedScore = 0;
         int actualScore = category.score(values);
         assertEquals(expectedScore, actualScore);

@@ -1,5 +1,7 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -12,22 +14,14 @@ public class OnePairCategory implements IScoreCategory{
     /**
      * This implementation of the onePair score() method calculates the score by finding the pair of dice with the highest value
      *
-     * @param values the values of the dice in the roll
+     * @param diceRoll the dice roll
      * @return the score value
      */
-    @Override
-    public int score(int[] values) {
+    public int score(DiceRoll diceRoll) {
 
-        // Utilisation de Collectors.groupingBy pour obtenir un Map des éléments et de leur nombre d'occurrences
-        Map<Integer, Long> countEachElement = Arrays.stream(values).boxed()
-                .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
+        Optional<Integer> pairValue = diceRoll.getPairsSortedDesc().stream().findFirst();
 
-        // Utilisation de Map.entrySet() et Stream pour récupérer le paire le plus grand
-        Optional<Integer> pair = countEachElement.entrySet().stream()
-                .filter(entry -> entry.getValue() >= 2)
-                .map(Map.Entry::getKey).min(Collections.reverseOrder());  // == .sorted(Collections.reverseOrder()).findFirst();
-
-        return pair.map(p -> p * 2).orElse(0);
+        return pairValue.map(v -> v * 2).orElse(0);
 
     }
 }

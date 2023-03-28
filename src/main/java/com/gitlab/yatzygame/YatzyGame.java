@@ -38,7 +38,7 @@ public class YatzyGame {
     }
 
     private static void rollingTheDice() {
-        int[] rollDice = new DiceRoll().getDiceValues();
+        DiceRoll rollDice = new DiceRoll();
 
         int AcesScore = new AcesCategory().score(rollDice);
         int TwosScore = new TwosCategory().score(rollDice);
@@ -58,7 +58,7 @@ public class YatzyGame {
         int YatzyScore = new YatzyCategory().score(rollDice);
 
 
-        System.out.println("####### Roll dice ########\n"+ Arrays.toString(rollDice));
+        System.out.println("####### Roll dice ########\n"+ rollDice.getDiceValues());
 
         System.out.println("\n####### Scores ########");
 

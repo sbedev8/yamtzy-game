@@ -1,5 +1,7 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
+
 import java.util.Arrays;
 
 /**
@@ -11,12 +13,11 @@ public class SixesCategory implements IScoreCategory{
     /**
      * Calculates the score for this category based on the sum of Sixes dice values in a roll.
      *
-     * @param values the values of the dice in the roll
-     * @return the sum of Sixes values in the given array
+     * @param diceRoll the dice roll
+     * @return the score value
      */
-    @Override
-    public int score(int[] values) {
-        return Arrays.stream(values).filter(v -> v == 6).sum();
+    public int score(DiceRoll diceRoll) {
+        return diceRoll.getSumOfDiceValues(6);
     }
 }
 

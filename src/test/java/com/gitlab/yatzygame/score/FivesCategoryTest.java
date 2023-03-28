@@ -1,5 +1,6 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class FivesCategoryTest {
 
     @Test
     public void testScoreWithNoFives() {
-        int[] values = {1, 3, 4, 2, 6};
+        DiceRoll values = new DiceRoll(1, 3, 4, 2, 6);
         int expectedScore = 0;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
@@ -17,7 +18,7 @@ public class FivesCategoryTest {
 
     @Test
     public void testScoreWithSomeFives() {
-        int[] values = {5, 3, 5, 2, 1};
+        DiceRoll values = new DiceRoll(5, 3, 5, 2, 1);
         int expectedScore = 10;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
@@ -25,7 +26,7 @@ public class FivesCategoryTest {
 
     @Test
     public void testScoreWithAllFives() {
-        int[] values = {5, 5, 5, 5, 5};
+        DiceRoll values = new DiceRoll(5, 5, 5, 5, 5);
         int expectedScore = 25;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);

@@ -1,5 +1,7 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
+
 import java.util.Arrays;
 
 /**
@@ -11,11 +13,11 @@ public class ChanceCategory implements IScoreCategory {
     /**
      * Calculates the score for this category based on the sum of all dice values in a roll.
      *
-     * @param values the values of the dice in the roll
-     * @return the sum of all values in the given array
+     * @param diceRoll the dice roll
+     * @return the sum of all values
      */
     @Override
-    public int score(int[] values) {
-        return Arrays.stream(values).sum();
+    public int score(DiceRoll diceRoll) {
+        return diceRoll.getSumOfAllDice();
     }
 }

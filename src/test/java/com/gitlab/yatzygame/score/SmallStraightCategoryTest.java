@@ -1,5 +1,6 @@
 package com.gitlab.yatzygame.score;
 
+import com.gitlab.yatzygame.dice.DiceRoll;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class SmallStraightCategoryTest {
 
     @Test
     public void testScoreWithoutSmallStraight() {
-        int[] values = {2, 2, 1, 3, 5};
+        DiceRoll values = new DiceRoll(2, 2, 1, 3, 5);
         int expectedScore = 0;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
@@ -17,7 +18,7 @@ public class SmallStraightCategoryTest {
 
     @Test
     public void testScoreWithSmallStraight() {
-        int[] values = {2, 3, 1, 5, 4};
+        DiceRoll values = new DiceRoll(2, 3, 1, 5, 4);
         int expectedScore = 15;
         int actualScore = strategy.score(values);
         assertEquals(expectedScore, actualScore);
