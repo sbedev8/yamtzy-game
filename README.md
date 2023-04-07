@@ -17,3 +17,6 @@
 - une image a été poussé sur docker hub https://hub.docker.com/r/sbedevhub/yatzy-game
   - $ docker pull sbedevhub/yatzy-game:latest
   - $ docker run -it sbedevhub/yatzy-game
+
+### origine du code 
+https://github.com/emilybache/Yatzy-Refactoring-Kata
